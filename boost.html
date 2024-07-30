@@ -27,15 +27,15 @@
         height: 2px;
         background-color: #fff;
         border-radius: 50%;
-        animation: move 7s infinite linear; /* увеличить время анимации до 10 секунд */
+        animation: move 7s infinite linear;
     }
     
     @keyframes move {
         0% {
-            transform: translateX(0);
+            transform: translate(0, 0);
         }
         100% {
-            transform: translateX(100vw);
+            transform: translate(15vw, 100vh);
         }
     }
     </style>
@@ -45,12 +45,12 @@
         let star = document.createElement('div');
         star.className = 'star';
         star.style.top = `${Math.random() * 100}%`;
-        star.style.left = `${Math.random() < 0.7? Math.random() * 20 : Math.random() * 80 + 20}%`;
+        star.style.left = `${Math.random() * 100}%`;
         document.body.appendChild(star);
         setTimeout(() => {
             star.remove();
-        }, 7000); // удалить звезду через 10 секунд
+        }, 7000);
     }
     
-    setInterval(createStar, 150); // создавать новую звезду каждые 100 мс
+    setInterval(createStar, 120);
     </script>
