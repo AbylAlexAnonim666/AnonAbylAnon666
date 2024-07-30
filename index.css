@@ -1,3 +1,7 @@
+body {
+    background-color: #000;
+}
+
 .tabs {
     position: fixed;
     bottom: 0;
@@ -5,7 +9,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: #333;
+    background-color: #222;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
@@ -21,7 +25,10 @@
 }
 
 .tab.active {
-    background-color: #555;
+    background-color: #333;
+    border-radius: 8px;
+    transition: background-color 0.5s;
+    transition: border-radius 0.1s;
 }
 
 .tab-content {

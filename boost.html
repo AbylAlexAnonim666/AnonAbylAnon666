@@ -3,10 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none';">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/index.css">
+    <script src="index.js"></script>
+    <script src="/index.js"></script>
     <title></title>
 </head>
 <body>
-    <h1>s</h1>
 </body>
 </html>
+
+<style>body {
+    background-color: #000;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkling 2s infinite;
+}
+
+@keyframes twinkling {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}</style><script>        for (let i = 0; i < 100; i++) {
+    let star = document.createElement('div');
+    star.className = 'star';
+    star.style.top = `${Math.random() * 100}%`;
+    star.style.left = `${Math.random() * 100}%`;
+    document.body.appendChild(star);
+}</script>
