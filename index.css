@@ -11,12 +11,14 @@ body {
     justify-content: space-around;
     background-color: #222;
     padding: 10px;
+    user-select: none;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 .tab {
     background-color: inherit;
     border: none;
+    user-select: none;
     outline: none;
     cursor: pointer;
     padding: 10px;
@@ -35,4 +37,5 @@ body {
     padding-bottom: 60px; /* Высота нижних вкладок */
     height: 100vh;
     overflow-y: auto;
+    user-select: none;
 }

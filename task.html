@@ -27,15 +27,15 @@
         height: 2px;
         background-color: #fff;
         border-radius: 50%;
-        animation: move 1s infinite linear;
+        animation: move 10s infinite linear;
     }
     
     @keyframes move {
         0% {
-            transform: translateX(0);
+            transform: translate(0, 0);
         }
         100% {
-            transform: translateX(100vw);
+            transform: translate(20vw, 100vh);
         }
     }
     </style>
@@ -49,8 +49,8 @@
         document.body.appendChild(star);
         setTimeout(() => {
             star.remove();
-        }, 5000); // удалить звезду через 5 секунд
+        }, 7000);
     }
     
-    setInterval(createStar, 100); // создавать новую звезду каждые 100 мс
+    setInterval(createStar, 150);
     </script>
