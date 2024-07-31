@@ -1,3 +1,5 @@
+let tg = window.Telegram.WebApp;
+
 function openTab(tabName) {
     document.getElementById("tab-iframe").src = tabName;
     var tablinks = document.getElementsByClassName("tab");
