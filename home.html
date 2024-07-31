@@ -5,52 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="index.js"></script>
     <script src="/index.js"></script>
     <title></title>
 </head>
 <body>
+    <div class="header">
+        <div>
+
+        </div>
+        <div class="right">
+            <button class="header-button" onclick="openTab('settings.html')">
+                <i class="fa fa-gear" style="color: #fff; font-size: 25px;"></i><br>Misc
+            </button>
+        </div>
+    </div>
+    <div class="tab-content">
+        <iframe id="tab-iframe" src="" frameborder="0" width="100%" height="100%"></iframe>
+    </div>    
 </body>
 </html>
-
-<style>
-    body {
-        background-color: #000;
-        overflow: hidden;
-    }
-    
-    .star {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 2px;
-        height: 2px;
-        background-color: #fff;
-        border-radius: 50%;
-        animation: move 7s infinite linear;
-    }
-    
-    @keyframes move {
-        0% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(15vw, 100vh);
-        }
-    }
-    </style>
-    
-    <script>
-    function createStar() {
-        let star = document.createElement('div');
-        star.className = 'star';
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.left = `${Math.random() * 100}%`;
-        document.body.appendChild(star);
-        setTimeout(() => {
-            star.remove();
-        }, 7000);
-    }
-    
-    setInterval(createStar, 120);
-    </script>

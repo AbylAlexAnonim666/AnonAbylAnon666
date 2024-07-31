@@ -26,11 +26,17 @@ body {
     font-size: 10px;
 }
 
+.tab:hover {
+    background-color: #292929;
+    border-radius: 8px;
+    transition: background-color 0.5s;
+    transition: border-radius 0.1s;
+}
+
 .tab.active {
     background-color: #333;
     border-radius: 8px;
     transition: background-color 0.5s;
-    transition: border-radius 0.1s;
 }
 
 .tab-content {
@@ -38,4 +44,44 @@ body {
     height: 100vh;
     overflow-y: auto;
     user-select: none;
+}
+
+
+.header {
+    transition: all 1s;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background-color: #222;
+    padding: 10px;
+    user-select: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.right {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background-color: #222;
+    user-select: none;
+    justify-content: flex-end;
+}
+
+.header-button {
+    background-color: inherit;
+    border: none;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+    padding: 7px 15px;
+    color: #fff;
+    font-size: 10px;
+}
+
+.header-button:hover {
+    background-color: #333;
+    border-radius: 2px;
+    transition: background-color 0.3s;
 }
