@@ -2,7 +2,10 @@
 
 body {
     background-color: #000;
+    background-image: url('back.jpeg');
+    background-size: cover;
     font-family: 'Poppins', 'sans-serif';
+    overflow: hidden;
 }
 
 .tabs {
@@ -12,7 +15,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: #222;
+    background-color: #1d7b5ac4;
     padding: 10px;
     user-select: none;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -28,12 +31,14 @@ body {
     padding: 10px;
     color: #fff;
     font-size: 12px;
+    background-color: transparent;
 }
 
 .tab.active {
-    background-color: #333;
+    background-color: #1d7b5a;
     border-radius: 8px;
     transition: background-color 0.5s;
+    transition: border-radius 0.2s;
 }
 
 .tab-content {
@@ -45,6 +50,7 @@ body {
 
 .welcome {
     font-family: 'Poppins', 'sans-serif';
+    font-weight: bold;
     color: #fff; font-size: 20px; margin: 5px 5px auto;
 }
 
@@ -54,7 +60,7 @@ body {
     left: 0;
     width: 100%;
     display: flex;
-    background-color: #222;
+    background-color: transparent;
     padding: 10px;
     user-select: none;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -66,7 +72,7 @@ body {
     left: 0;
     width: 100%;
     display: flex;
-    background-color: #222;
+    background-color: transparent;
     user-select: none;
     justify-content: flex-end;
 }
@@ -82,7 +88,7 @@ body {
     font-size: 12px;
 }
 
-.header-button:hover {
+.header-button.active {
     background-color: #333;
     border-radius: 2px;
     transition: background-color 0.3s;

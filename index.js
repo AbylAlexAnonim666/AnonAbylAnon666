@@ -13,15 +13,27 @@ function openTab(tabName) {
 }
 
 function openHead(headName) {
-    document.getElementById("header-iframe").src = headName;
+    var iframe = document.getElementById("header-iframe");
     var headlinks = document.getElementsByClassName("header-button");
-    for (var i = 0; i < headlinks.length; i++) {
-        headlinks[i].classList.remove("active");
-    }
-    var btns1 = document.getElementsByClassName("header-button");
-    for (var i = 0; i < btns1.length; i++) {
-        if (btns1[i].getAttribute("onclick").includes(headName)) {
-            btns1[i].classList.add("active");
+
+    // Проверяем, открыт ли уже этот заголовок
+    if (iframe.src.includes(headName)) {
+        // Если открыт, закрываем его
+        iframe.src = "";
+        for (var i = 0; i < headlinks.length; i++) {
+            headlinks[i].classList.remove("active");
+        }
+    } else {
+        // Если не открыт, открываем его
+        iframe.src = headName;
+        for (var i = 0; i < headlinks.length; i++) {
+            headlinks[i].classList.remove("active");
+        }
+        var btns1 = document.getElementsByClassName("header-button");
+        for (var i = 0; i < btns1.length; i++) {
+            if (btns1[i].getAttribute("onclick").includes(headName)) {
+                btns1[i].classList.add("active");
+            }
         }
     }
 }
