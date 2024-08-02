@@ -26,3 +26,28 @@ function openGameEV1(tabName) {
     }
 }
 
+let tg = window.Telegram.Webapp;
+
+tg.expand();
+
+tg.Mainbutton.textColor = '#FFFFF';
+tg.Mainbutton.color = '#2cab37';
+
+let.item = "";
+
+let btn1 = document.getElementById("clicker");
+
+btn1.addEventListener("click", function(){
+    if (tg.Mainbutton.isVisible) {
+        tg.Mainbutton.hide();
+    }
+    else {
+        tg.Mainbutton.setText("Hello");
+        item = "1";
+        tg.Mainbutton.Show();
+    }
+});
+
+Telegram.Webapp.onEvent("mainButtonClicked", function(){
+    tg.sendData(item);
+});
