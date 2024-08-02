@@ -25,3 +25,4 @@ function openGameEV1(tabName) {
         }
     }
 }
+

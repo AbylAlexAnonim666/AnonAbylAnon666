@@ -68,16 +68,6 @@ body {
     font-family: 'Poppins', 'sans-serif';
 }
 
-.right {
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    background-color: transparent;
-    user-select: none;
-    justify-content: flex-end;
-}
-
 .header-button {
     background-color: inherit;
     border: none;
@@ -130,4 +120,72 @@ body {
     height: 100vh;
     overflow-y: auto;
     user-select: none;
+}
+
+.daily-boosters {
+    background-color: #00ff95ae;
+    padding: 20px 70px;
+    border-radius: 8px;
+    border: solid 2px #00ff95da;
+}
+
+.text {
+    font-family: 'Poppins', 'sans-serif';
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+    margin: 5px 5px auto;
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-boosts {
+    background-color: #00ff95ae;
+    width: 300px;
+    height: 300px;
+    border-radius: 32px;
+    border: solid 3px #00ff95da;
+}
+
+.clicker {
+    background-color: #00ff95ae;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 10% auto;
+    border: solid 2px #00ff95da;
+}
+
+.clicker:active {
+    background-color: #00ff9596;
+    transition: background-color 0.1s;
+}
+
+.boosters {
+    background-color: #00ff9525;
+    height: 65px;
+    width: 280px;
+    border-radius: 12px;
+    border: solid 2px #00ff9591;
+    display: flex;
+    justify-content: start;
+}
+
+.emoji {
+    margin: 8px 6px auto;
+    width: 50px;
+    height: 50px;
+    background-color: #00000023;
+    border-radius: 8px;
+}
+
+#counter {
+	font-size: 48px;
+	font-weight: bold;
+    color: #fff;
+	margin-bottom: 20px;
 }

@@ -13,16 +13,23 @@
 </head>
 <body>
     <div class="header">
-        <div>
-            <span class="welcome">Welcome</span>
-        </div>
+        <span class="welcome">Welcome</span>
     </div>
     <center>
-        <a href="event1.html">
-            <button class="event">
-                <span><i class="fa fa-calendar"></i> SPACESHIP</span>
+        <h1 id="counter">0</h1>
+        <div id="clicker">
+            <button class="clicker">
+                <i class="fa fa-star" style="font-size: 150px; margin: 80px auto; color: #00000046;"></i>
             </button>
-        </a>
-    </center> 
+        </div>
+    </center>
+    <script>
+    let counter = 0;
+
+        document.getElementById('clicker').addEventListener('click', function() {
+            counter++;
+            document.getElementById('counter').innerHTML = counter;
+        });
+    </script>
 </body>
 </html>
