@@ -20,44 +20,17 @@
         <h1 id="counter">0</h1>
         <div id="clicker">
             <button class="clicker">
-                <i class="fa fa-star" style="font-size: 150px; margin: 80px auto; color: #00000046;"></i>
+                <p style="color: #00ff9596;">soon</p>
             </button>
         </div>
     </center>
     <script>
     let counter = 0;
 
-        document.getElementById('clicker').addEventListener('click', function() {
-            counter++;
-            document.getElementById('counter').innerHTML = counter;
-        });
-
-        let tg = window.Telegram.Webapp;
-
-tg.expand();
-
-tg.Mainbutton.textColor = '#FFFFF';
-tg.Mainbutton.color = '#2cab37';
-
-let.item = "";
-
-let btn1 = document.getElementById("clicker");
-
-btn1.addEventListener("click", function(){
-    if (tg.Mainbutton.isVisible) {
-        tg.Mainbutton.hide();
-    }
-    else {
-        tg.Mainbutton.setText("Hello");
-        item = "1";
-        tg.Mainbutton.Show();
-    }
-});
-
-Telegram.Webapp.onEvent("mainButtonClicked", function(){
-    tg.sendData(item);
-});
-
+    document.getElementById('clicker').addEventListener('click', function() {
+        counter++;
+        document.getElementById('counter').innerHTML = counter;
+    });
     </script>
 </body>
 </html>
